@@ -6,280 +6,30 @@
   <title>深圳市时外材料科技有限公司｜表面处理化学品与金属防护解决方案</title>
   <meta name="description" content="深圳市时外材料科技有限公司，专业从事表面处理化学品、金属表面防护化学品研发制造，服务PCB、半导体、晶圆、通用五金、新能源与电子制造行业。" />
   <style>
-    :root{
-      --blue:#0b3f91;
-      --blue2:#145fbd;
-      --deep:#071d3a;
-      --cyan:#0aa6d8;
-      --text:#172033;
-      --muted:#667085;
-      --bg:#f5f8fc;
-      --line:#d9e4f2;
-      --white:#fff;
-      --soft:#eaf3ff;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.7}
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
-    nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-    .nav-inner{max-width:1180px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--blue)}
-    .brand-mark{width:40px;height:40px;background:linear-gradient(135deg,var(--blue),var(--cyan));border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:900}
-    .brand small{display:block;font-size:10px;letter-spacing:2px;color:var(--muted);font-weight:700}
-    .nav-links{display:flex;align-items:center;gap:22px;font-size:14px;color:#23395d;font-weight:700}
-    .nav-links a:hover{color:var(--blue2)}
-    .nav-cta{background:var(--blue);color:#fff;padding:9px 14px;border-radius:8px}
-    .hero{position:relative;background:linear-gradient(120deg,rgba(7,29,58,.90),rgba(11,63,145,.75)),url("assets/images/hero-cover.jpg") center/cover no-repeat;color:#fff}
-    .hero-inner{max-width:1180px;margin:auto;padding:120px 22px 96px;display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
-    .eyebrow{letter-spacing:4px;text-transform:uppercase;color:#8ed8ff;font-size:12px;font-weight:900;margin-bottom:16px}
-    h1{font-size:48px;line-height:1.12;margin:0 0 22px;letter-spacing:1px}
-    .hero p{font-size:18px;color:rgba(255,255,255,.88);margin:0 0 30px}
-    .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:8px;font-weight:900;border:1px solid transparent}
-    .btn.primary{background:#fff;color:var(--blue)}
-    .btn.secondary{border-color:rgba(255,255,255,.45);color:#fff}
-    .hero-card{background:rgba(255,255,255,.96);border-radius:22px;padding:18px;box-shadow:0 24px 80px rgba(0,0,0,.25)}
-    .hero-card img{border-radius:16px}
-    .stats{max-width:1180px;margin:-34px auto 0;padding:0 22px;position:relative;z-index:2}
-    .stats-grid{background:#fff;border:1px solid var(--line);border-radius:18px;display:grid;grid-template-columns:repeat(4,1fr);box-shadow:0 18px 50px rgba(20,80,150,.12);overflow:hidden}
-    .stat{padding:24px;border-right:1px solid var(--line)}
-    .stat:last-child{border-right:none}
-    .stat b{font-size:30px;color:var(--blue)}
-    .stat span{display:block;color:var(--muted);font-size:13px}
-    section{padding:82px 22px}
-    .inner{max-width:1180px;margin:auto}
-    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:34px}
-    .section-head h2{font-size:34px;margin:0;color:var(--deep)}
-    .section-head p{max-width:620px;color:var(--muted);margin:0}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
-    .panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:0 14px 40px rgba(20,80,150,.08)}
-    .panel h3{font-size:24px;margin:0 0 12px;color:var(--blue)}
-    .panel p{color:var(--muted);margin:0 0 16px}
-    .feature-list{display:grid;gap:12px;margin-top:18px}
-    .feature{display:flex;gap:10px;align-items:flex-start;color:#31415f}
-    .dot{width:9px;height:9px;margin-top:10px;border-radius:50%;background:var(--cyan);flex:none}
-    .visual{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#fff}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;transition:.2s;min-height:220px}
-    .card:hover{transform:translateY(-3px);box-shadow:0 18px 45px rgba(20,80,150,.12)}
-    .card .icon{width:46px;height:46px;border-radius:12px;background:var(--soft);color:var(--blue);display:grid;place-items:center;font-size:22px;font-weight:900;margin-bottom:16px}
-    .card h3{margin:0 0 10px;font-size:20px;color:var(--deep)}
-    .card p{margin:0;color:var(--muted);font-size:14px}
-    .solution-row{display:grid;grid-template-columns:.95fr 1.05fr;gap:24px;margin-bottom:24px;align-items:stretch}
-    .solution-row:nth-child(even){grid-template-columns:1.05fr .95fr}
-    .solution-copy{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px}
-    .solution-copy h3{font-size:24px;margin:0 0 10px;color:var(--blue)}
-    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
-    .tag{font-size:12px;background:#edf6ff;color:var(--blue);padding:6px 9px;border-radius:999px;font-weight:800}
-    .product-table{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
-    table{width:100%;border-collapse:collapse}
-    th,td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:left;font-size:14px}
-    th{background:var(--blue);color:#fff}
-    tr:last-child td{border-bottom:none}
-    .certs{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-    .cta{background:linear-gradient(135deg,var(--blue),var(--deep));color:#fff;border-radius:24px;padding:44px;display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:center}
-    .cta h2{font-size:32px;margin:0 0 10px}
-    .cta p{margin:0;color:rgba(255,255,255,.84)}
-    .contact-box{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:22px}
-    footer{background:#071d3a;color:#bcd1ee;padding:32px 22px;text-align:center}
-    @media(max-width:900px){
-      .nav-links{display:none}
-      .hero-inner,.grid-2,.solution-row,.solution-row:nth-child(even),.cta{grid-template-columns:1fr}
-      h1{font-size:36px}
-      .stats-grid,.cards,.certs{grid-template-columns:1fr}
-      .stat{border-right:none;border-bottom:1px solid var(--line)}
-      .section-head{display:block}
-    }
+    :root{--blue:#163f9f;--blue2:#245dcc;--deep:#061b3d;--sky:#eaf3ff;--cyan:#00a6d8;--text:#152238;--muted:#66758a;--bg:#f5f8fc;--line:#d9e5f4;--white:#fff;--gold:#f3bf35}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.75}a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
+    nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav-inner{max-width:1200px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;color:var(--blue);font-weight:900}.brand-mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:white;font-weight:900}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:2px}.nav-links{display:flex;gap:20px;font-size:14px;font-weight:800;color:#263b5b}.nav-links a:hover{color:var(--blue2)}.nav-cta{background:var(--blue);color:white!important;padding:9px 14px;border-radius:8px}
+    .hero{background:linear-gradient(110deg,rgba(6,27,61,.88),rgba(22,63,159,.72)),url('assets/images/hero-cover.jpg') center/cover no-repeat;color:white}.hero-inner{max-width:1200px;margin:auto;padding:116px 22px 86px;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}.eyebrow{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#8ed8ff;font-weight:900;margin-bottom:14px}.hero h1{font-size:50px;line-height:1.12;margin:0 0 20px;letter-spacing:1px}.hero p{font-size:18px;color:rgba(255,255,255,.88);margin:0 0 28px}.btns{display:flex;gap:14px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:8px;font-weight:900;border:1px solid transparent}.btn.primary{background:#fff;color:var(--blue)}.btn.secondary{border-color:rgba(255,255,255,.45);color:white}.hero-card{background:rgba(255,255,255,.94);padding:16px;border-radius:22px;box-shadow:0 26px 80px rgba(0,0,0,.28)}.hero-card img{border-radius:16px}
+    .quick-stats{max-width:1200px;margin:-34px auto 0;padding:0 22px;position:relative;z-index:2}.stats-grid{background:white;border:1px solid var(--line);border-radius:18px;display:grid;grid-template-columns:repeat(4,1fr);box-shadow:0 18px 50px rgba(20,80,150,.12);overflow:hidden}.stat{padding:24px;border-right:1px solid var(--line)}.stat:last-child{border-right:0}.stat b{font-size:26px;color:var(--blue)}.stat span{display:block;color:var(--muted);font-size:13px;margin-top:4px}
+    .module{padding:82px 22px}.module.white{background:white}.inner{max-width:1200px;margin:auto}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:34px}.section-head h2{font-size:34px;line-height:1.2;margin:0;color:var(--deep)}.section-head p{max-width:640px;margin:0;color:var(--muted)}.kicker{color:var(--blue);font-weight:900;letter-spacing:2px;font-size:12px;text-transform:uppercase;margin-bottom:8px}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:32px;box-shadow:0 14px 42px rgba(20,80,150,.08)}.white .panel{background:#f9fbff}.panel h3{font-size:24px;color:var(--blue);margin:0 0 12px}.panel p{color:var(--muted);margin:0 0 16px}.visual{background:white;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 14px 42px rgba(20,80,150,.08)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border:1px solid var(--line);border-radius:20px;padding:26px;min-height:220px;box-shadow:0 10px 30px rgba(20,80,150,.06);transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:0 20px 50px rgba(20,80,150,.12)}.card .icon{width:48px;height:48px;border-radius:14px;background:var(--sky);display:grid;place-items:center;color:var(--blue);font-weight:900;margin-bottom:16px}.card h3{margin:0 0 10px;color:var(--deep);font-size:20px}.card p{margin:0;color:var(--muted);font-size:14px}
+    .flow{display:grid;gap:24px}.flow-item{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}.flow-item:nth-child(even) .flow-copy{order:2}.flow-copy{background:white;border:1px solid var(--line);border-radius:20px;padding:30px}.flow-copy h3{font-size:24px;margin:0 0 10px;color:var(--blue)}.flow-copy p{color:var(--muted);margin:0}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{background:#edf6ff;color:var(--blue);border-radius:999px;font-size:12px;font-weight:900;padding:6px 10px}
+    .table-wrap{background:white;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 14px 42px rgba(20,80,150,.08)}table{width:100%;border-collapse:collapse}th,td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:left;font-size:14px}th{background:var(--blue);color:white}tr:last-child td{border-bottom:0}.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .contact-module{background:linear-gradient(135deg,#143f9f,#1f4dae);color:white}.contact-grid{display:grid;grid-template-columns:1fr .9fr;gap:34px;align-items:center}.contact-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:34px}.contact-card h2{font-size:36px;margin:0 0 12px}.contact-card p{color:rgba(255,255,255,.88);margin:0 0 18px}.contact-list{display:grid;gap:14px;margin-top:22px}.contact-row{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:14px}.contact-row small{display:block;color:#cfe1ff}.qr-box{background:white;border-radius:24px;padding:24px;text-align:center;color:var(--blue);box-shadow:0 24px 70px rgba(0,0,0,.18)}.qr-box img{width:240px;margin:0 auto 14px;border:8px solid white}.full-contact{margin-top:22px;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.2)}footer{background:#061b3d;color:#bcd1ee;text-align:center;padding:30px 22px}
+    @media(max-width:900px){.nav-links{display:none}.hero-inner,.grid-2,.flow-item,.contact-grid{grid-template-columns:1fr}.flow-item:nth-child(even) .flow-copy{order:0}.stats-grid,.cards,.cert-grid{grid-template-columns:1fr}.hero h1{font-size:36px}.section-head{display:block}.stat{border-right:0;border-bottom:1px solid var(--line)}}
   </style>
 </head>
 <body>
-  <nav>
-    <div class="nav-inner">
-      <a class="brand" href="#home"><span class="brand-mark">SW</span><span>时外材料<small>OUTOFLINE MATERIAL</small></span></a>
-      <div class="nav-links">
-        <a href="#about">公司简介</a>
-        <a href="#strength">技术实力</a>
-        <a href="#applications">产品应用</a>
-        <a href="#solutions">工艺方案</a>
-        <a href="#products">产品目录</a>
-        <a href="#certificates">资质证书</a>
-        <a class="nav-cta" href="#contact">技术咨询</a>
-      </div>
-    </div>
-  </nav>
-
-  <header class="hero" id="home">
-    <div class="hero-inner">
-      <div>
-        <div class="eyebrow">Surface Treatment Chemicals</div>
-        <h1>专业表面处理化学品<br>与金属防护解决方案</h1>
-        <p>面向 PCB、半导体、晶圆、通用五金、新能源与电子制造行业，提供稳定、高效、可持续的工艺化学品与技术支持。</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#solutions">查看工艺方案</a>
-          <a class="btn secondary" href="assets/docs/shiwa-company-brochure.pdf" target="_blank">下载宣传册</a>
-        </div>
-      </div>
-      <div class="hero-card"><img src="assets/images/hero-cover.jpg" alt="深圳市时外材料科技有限公司宣传册封面"></div>
-    </div>
-  </header>
-
-  <div class="stats">
-    <div class="stats-grid">
-      <div class="stat"><b>PCB</b><span>前处理、孔金属化、ENIG/ENEPIG、后处理</span></div>
-      <div class="stat"><b>R&D</b><span>研发、检测、质量管控体系</span></div>
-      <div class="stat"><b>Metal</b><span>通用五金表面防护与电镀工艺</span></div>
-      <div class="stat"><b>Service</b><span>工艺咨询、样品测试、技术支持</span></div>
-    </div>
-  </div>
-
-  <section id="about">
-    <div class="inner grid-2">
-      <div class="panel">
-        <div class="eyebrow">Company Introduction</div>
-        <h3>深圳市时外材料科技有限公司</h3>
-        <p>公司专注于表面处理化学品与金属表面防护化学品的研发制造，围绕 PCB、半导体、晶圆、通用五金及新能源等行业的制程需求，提供产品与工艺方案。</p>
-        <div class="feature-list">
-          <div class="feature"><span class="dot"></span><span>覆盖前处理、孔金属化、化学镀镍金、后处理等多类工艺环节。</span></div>
-          <div class="feature"><span class="dot"></span><span>面向电子制造与金属表面处理企业，强调稳定性、环保性与量产适配。</span></div>
-          <div class="feature"><span class="dot"></span><span>以研发、检测、应用技术支持为核心，协助客户优化工艺窗口。</span></div>
-        </div>
-      </div>
-      <div class="visual"><img src="assets/images/applications.jpg" alt="产品应用"></div>
-    </div>
-  </section>
-
-  <section id="strength" style="background:#fff">
-    <div class="inner">
-      <div class="section-head">
-        <h2>技术实力</h2>
-        <p>围绕实验室研发、检测分析、生产设备与质量管理，建立面向表面处理行业的技术服务能力。</p>
-      </div>
-      <div class="grid-2">
-        <div class="visual"><img src="assets/images/technical-strength.jpg" alt="技术实力与实验室设备"></div>
-        <div class="cards" style="grid-template-columns:1fr 1fr">
-          <div class="card"><div class="icon">研</div><h3>研发团队</h3><p>持续开发适配 PCB、FPC、半导体与五金表面处理的化学品体系。</p></div>
-          <div class="card"><div class="icon">检</div><h3>检测能力</h3><p>通过实验室检测与制程验证，支持客户进行工艺评估。</p></div>
-          <div class="card"><div class="icon">产</div><h3>生产能力</h3><p>配套生产与品控流程，保障产品批次稳定性。</p></div>
-          <div class="card"><div class="icon">服</div><h3>技术服务</h3><p>提供现场问题分析、试样、工艺优化与产品选型建议。</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="applications">
-    <div class="inner">
-      <div class="section-head">
-        <h2>产品应用领域</h2>
-        <p>产品覆盖 PCB、半导体、晶圆、五金、汽车、消费电子、新能源及航空航天相关表面处理场景。</p>
-      </div>
-      <div class="cards">
-        <div class="card"><div class="icon">PCB</div><h3>PCB / FPC 制造</h3><p>前处理、孔金属化、ENIG/ENEPIG、后处理、OSP、防氧化等工艺。</p></div>
-        <div class="card"><div class="icon">IC</div><h3>半导体与晶圆</h3><p>用于精密电子制造中对洁净度、稳定性和表面状态要求较高的场景。</p></div>
-        <div class="card"><div class="icon">金</div><h3>通用五金与电镀</h3><p>化学镀镍、锌镍、电镀铜、封孔、防护等金属表面处理方向。</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="solutions" style="background:#fff">
-    <div class="inner">
-      <div class="section-head">
-        <h2>工艺解决方案</h2>
-        <p>按客户工艺段提供产品组合与技术支持，便于客户快速理解产品在制程中的位置。</p>
-      </div>
-
-      <div class="solution-row">
-        <div class="solution-copy">
-          <h3>PCB 前处理工艺</h3>
-          <p>面向除油、微蚀、粗化、减铜、通孔等工艺段，配套酸性清洁剂、碱性清洁剂、微蚀稳定剂、有机硫退膜液等产品。</p>
-          <div class="tags"><span class="tag">除油</span><span class="tag">微蚀</span><span class="tag">粗化</span><span class="tag">减铜</span><span class="tag">通孔</span></div>
-        </div>
-        <div class="visual"><img src="assets/images/pcb-pretreatment.jpg" alt="PCB前处理工艺"></div>
-      </div>
-
-      <div class="solution-row">
-        <div class="visual"><img src="assets/images/metallization.jpg" alt="PCB孔金属化工艺"></div>
-        <div class="solution-copy">
-          <h3>PCB 孔金属化工艺</h3>
-          <p>覆盖膨松、除胶渣、整孔、沉铜、电镀铜等环节，适用于 PCB 与 FPC 水平沉铜相关工艺。</p>
-          <div class="tags"><span class="tag">膨松</span><span class="tag">除胶渣</span><span class="tag">整孔</span><span class="tag">沉铜</span><span class="tag">电镀铜</span></div>
-        </div>
-      </div>
-
-      <div class="solution-row">
-        <div class="solution-copy">
-          <h3>ENIG / ENEPIG 与后处理</h3>
-          <p>提供活化、化学镍、化学钯、化学金、封孔、清洗等工艺段产品，支持高可靠性电子制造需求。</p>
-          <div class="tags"><span class="tag">ENIG</span><span class="tag">ENEPIG</span><span class="tag">封孔</span><span class="tag">金面清洗</span></div>
-        </div>
-        <div class="visual"><img src="assets/images/enig-enepig.jpg" alt="ENIG ENEPIG工艺"></div>
-      </div>
-
-      <div class="solution-row">
-        <div class="visual"><img src="assets/images/hardware-plating.jpg" alt="通用五金电镀工艺"></div>
-        <div class="solution-copy">
-          <h3>通用五金电镀与防护</h3>
-          <p>围绕功能性化学镀镍、锌镍、电镀铜、封孔剂等产品，为五金及精密零部件提供表面性能提升方案。</p>
-          <div class="tags"><span class="tag">化学镀镍</span><span class="tag">锌镍合金</span><span class="tag">电镀铜</span><span class="tag">封孔防护</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="products">
-    <div class="inner">
-      <div class="section-head">
-        <h2>产品目录</h2>
-        <p>以下为网站首版整理的核心产品分类。后续可继续扩展为完整型号检索表。</p>
-      </div>
-      <div class="product-table">
-        <table>
-          <thead><tr><th>产品类别</th><th>代表工艺</th><th>应用方向</th></tr></thead>
-          <tbody>
-            <tr><td>PCB 前处理系列</td><td>清洁、微蚀、粗化、减铜、通孔</td><td>硬板、软板、HDI、封装基板等前处理</td></tr>
-            <tr><td>PCB 孔金属化系列</td><td>膨松、除胶渣、整孔、沉铜、电镀铜</td><td>PCB / FPC 水平沉铜与孔金属化</td></tr>
-            <tr><td>ENIG / ENEPIG 系列</td><td>活化、化学镍、化学钯、化学金</td><td>高可靠性焊接与表面镀层</td></tr>
-            <tr><td>PCB 后处理系列</td><td>封孔、金面清洗、防氧化</td><td>表面保护、耐盐雾、稳定性提升</td></tr>
-            <tr><td>通用五金系列</td><td>化学镀镍、锌镍、电镀铜、封孔</td><td>五金件、汽车零部件、电子配件</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="visual" style="margin-top:24px"><img src="assets/images/product-directory-1.jpg" alt="产品目录页示例"></div>
-    </div>
-  </section>
-
-  <section id="certificates" style="background:#fff">
-    <div class="inner">
-      <div class="section-head">
-        <h2>专利与证书</h2>
-        <p>通过专利、质量体系与环境管理相关证书展示公司研发与规范化管理能力。</p>
-      </div>
-      <div class="certs">
-        <div class="visual"><img src="assets/images/patents.jpg" alt="我们的专利"></div>
-        <div class="visual"><img src="assets/images/certificates.jpg" alt="我们的证书"></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="inner">
-      <div class="cta">
-        <div>
-          <h2>获取产品资料与工艺咨询</h2>
-          <p>可根据客户产品类型、基材、工艺段、品质要求和现场问题，提供产品选型、样品测试与技术方案建议。</p>
-        </div>
-        <div class="contact-box">
-          <p><strong>深圳市时外材料科技有限公司</strong></p>
-          <p>Shenzhen Outofline Material Technology Co., Ltd.</p>
-          <p>咨询内容：PCB / FPC / 半导体 / 五金表面处理化学品</p>
-          <a class="btn primary" href="assets/docs/shiwa-company-brochure.pdf" target="_blank" style="margin-top:8px">下载公司宣传册</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 深圳市时外材料科技有限公司 · 专业表面处理化学品与金属防护解决方案
-  </footer>
+  <nav><div class="nav-inner"><a class="brand" href="#home"><span class="brand-mark">SW</span><span>时外材料<small>OUTOFLINE MATERIAL</small></span></a><div class="nav-links"><a href="#about">公司简介</a><a href="#strength">技术实力</a><a href="#applications">产品应用</a><a href="#solutions">工艺方案</a><a href="#products">产品目录</a><a href="#contact" class="nav-cta">联系我们</a></div></div></nav>
+  <header class="hero" id="home"><div class="hero-inner"><div><div class="eyebrow">Surface Treatment Chemicals</div><h1>专业表面处理化学品<br>与金属防护解决方案</h1><p>服务 PCB、半导体、晶圆、通用五金、新能源与电子制造行业，提供稳定、高效、可持续的工艺化学品与技术支持。</p><div class="btns"><a class="btn primary" href="#solutions">查看工艺方案</a><a class="btn secondary" href="assets/docs/shiwa-company-brochure.pdf" target="_blank">下载宣传册</a></div></div><div class="hero-card"><img src="assets/images/hero-cover.jpg" alt="时外材料宣传册封面"></div></div></header>
+  <div class="quick-stats"><div class="stats-grid"><div class="stat"><b>PCB</b><span>前处理 / 孔金属化 / 后处理</span></div><div class="stat"><b>ENIG</b><span>化学镍金与 ENEPIG 工艺</span></div><div class="stat"><b>R&D</b><span>研发、检测与质量管控</span></div><div class="stat"><b>Service</b><span>工艺咨询与样品测试支持</span></div></div></div>
+  <section class="module" id="about"><div class="inner grid-2"><div class="panel"><div class="kicker">Company Introduction</div><h3>深圳市时外材料科技有限公司</h3><p>公司专注于表面处理化学品与金属表面防护化学品的研发制造，围绕 PCB、半导体、晶圆、通用五金及新能源等行业的制程需求，提供产品与工艺方案。</p><p>网站首版采用模块化展示方式，便于客户快速了解公司、产品应用、工艺方案、产品目录和联系方式。</p></div><div class="visual"><img src="assets/images/applications.jpg" alt="产品应用领域"></div></div></section>
+  <section class="module white" id="strength"><div class="inner"><div class="section-head"><div><div class="kicker">Technical Strength</div><h2>技术实力</h2></div><p>围绕实验室研发、检测分析、生产设备与质量管理，建立面向表面处理行业的技术服务能力。</p></div><div class="grid-2"><div class="visual"><img src="assets/images/technical-strength.jpg" alt="技术实力"></div><div class="cards" style="grid-template-columns:1fr 1fr"><div class="card"><div class="icon">研</div><h3>研发团队</h3><p>持续开发适配电子制造与五金表面处理的化学品体系。</p></div><div class="card"><div class="icon">检</div><h3>检测能力</h3><p>通过实验室检测与制程验证，支持客户进行工艺评估。</p></div><div class="card"><div class="icon">产</div><h3>生产能力</h3><p>配套生产与品控流程，保障产品批次稳定性。</p></div><div class="card"><div class="icon">服</div><h3>技术服务</h3><p>提供现场问题分析、试样、选型和工艺优化建议。</p></div></div></div></div></section>
+  <section class="module" id="applications"><div class="inner"><div class="section-head"><div><div class="kicker">Product Application</div><h2>产品应用领域</h2></div><p>按客户所在行业与制程段展示产品体系，避免单纯堆砌产品型号。</p></div><div class="cards"><div class="card"><div class="icon">PCB</div><h3>PCB / FPC 制造</h3><p>前处理、孔金属化、ENIG/ENEPIG、后处理、OSP、防氧化等工艺。</p></div><div class="card"><div class="icon">IC</div><h3>半导体与晶圆</h3><p>适用于精密电子制造中对洁净度、稳定性和表面状态要求较高的场景。</p></div><div class="card"><div class="icon">金</div><h3>通用五金与电镀</h3><p>化学镀镍、锌镍、电镀铜、封孔、防护等金属表面处理方向。</p></div></div></div></section>
+  <section class="module white" id="solutions"><div class="inner"><div class="section-head"><div><div class="kicker">Process Solutions</div><h2>工艺解决方案</h2></div><p>以工艺流程为主线展示产品能力，让客户先看到“能解决什么问题”。</p></div><div class="flow"><div class="flow-item"><div class="flow-copy"><h3>PCB 前处理工艺</h3><p>面向除油、微蚀、粗化、减铜、通孔等工艺段，配套清洁剂、微蚀稳定剂、退膜液等产品。</p><div class="tags"><span class="tag">除油</span><span class="tag">微蚀</span><span class="tag">粗化</span><span class="tag">减铜</span><span class="tag">通孔</span></div></div><div class="visual"><img src="assets/images/pcb-pretreatment.jpg" alt="PCB前处理"></div></div><div class="flow-item"><div class="visual"><img src="assets/images/metallization.jpg" alt="孔金属化"></div><div class="flow-copy"><h3>PCB 孔金属化工艺</h3><p>覆盖膨松、除胶渣、整孔、沉铜、电镀铜等环节，适用于 PCB 与 FPC 水平沉铜相关工艺。</p><div class="tags"><span class="tag">膨松</span><span class="tag">除胶渣</span><span class="tag">整孔</span><span class="tag">沉铜</span><span class="tag">电镀铜</span></div></div></div><div class="flow-item"><div class="flow-copy"><h3>ENIG / ENEPIG 与后处理</h3><p>提供活化、化学镍、化学钯、化学金、封孔、清洗等工艺段产品，支持高可靠性电子制造需求。</p><div class="tags"><span class="tag">ENIG</span><span class="tag">ENEPIG</span><span class="tag">封孔</span><span class="tag">金面清洗</span></div></div><div class="visual"><img src="assets/images/enig-enepig.jpg" alt="ENIG ENEPIG"></div></div><div class="flow-item"><div class="visual"><img src="assets/images/hardware-plating.jpg" alt="五金电镀"></div><div class="flow-copy"><h3>通用五金电镀与防护</h3><p>围绕功能性化学镀镍、锌镍、电镀铜、封孔剂等产品，为五金及精密零部件提供表面性能提升方案。</p><div class="tags"><span class="tag">化学镀镍</span><span class="tag">锌镍合金</span><span class="tag">电镀铜</span><span class="tag">封孔防护</span></div></div></div></div></div></section>
+  <section class="module" id="products"><div class="inner"><div class="section-head"><div><div class="kicker">Product Directory</div><h2>产品目录</h2></div><p>首版先按核心分类展示，后续可以扩展成可搜索产品型号表。</p></div><div class="table-wrap"><table><thead><tr><th>产品类别</th><th>代表工艺</th><th>应用方向</th></tr></thead><tbody><tr><td>PCB 前处理系列</td><td>清洁、微蚀、粗化、减铜、通孔</td><td>硬板、软板、HDI、封装基板等前处理</td></tr><tr><td>PCB 孔金属化系列</td><td>膨松、除胶渣、整孔、沉铜、电镀铜</td><td>PCB / FPC 水平沉铜与孔金属化</td></tr><tr><td>ENIG / ENEPIG 系列</td><td>活化、化学镍、化学钯、化学金</td><td>高可靠性焊接与表面镀层</td></tr><tr><td>PCB 后处理系列</td><td>封孔、金面清洗、防氧化</td><td>表面保护、耐盐雾、稳定性提升</td></tr><tr><td>通用五金系列</td><td>化学镀镍、锌镍、电镀铜、封孔</td><td>五金件、汽车零部件、电子配件</td></tr></tbody></table></div><div class="visual" style="margin-top:24px"><img src="assets/images/product-directory-1.jpg" alt="产品目录示例"></div></div></section>
+  <section class="module white" id="certificates"><div class="inner"><div class="section-head"><div><div class="kicker">Patent & Certificates</div><h2>专利与证书</h2></div><p>展示公司研发积累、质量体系与规范化管理能力。</p></div><div class="cert-grid"><div class="visual"><img src="assets/images/patents.jpg" alt="专利"></div><div class="visual"><img src="assets/images/certificates.jpg" alt="证书"></div></div></div></section>
+  <section class="module contact-module" id="contact"><div class="inner contact-grid"><div class="contact-card"><div class="kicker" style="color:#cfe1ff">Contact Us</div><h2>联系我们</h2><p>欢迎咨询 PCB / FPC / 半导体 / 通用五金表面处理化学品与工艺方案。</p><div class="contact-list"><div class="contact-row"><small>联系电话</small><strong>0755-33228433</strong></div><div class="contact-row"><small>公司地址</small><strong>深圳市坪山区坑梓街道金沙社区临惠路19号银星生命健康科技园</strong></div><div class="contact-row"><small>资料下载</small><a href="assets/docs/shiwa-company-brochure.pdf" target="_blank"><strong>下载公司宣传册</strong></a></div></div></div><div><div class="qr-box"><img src="assets/images/contact-qr.png" alt="时外材料联系二维码"><h3>扫码联系我们</h3><p>获取产品资料、工艺咨询与样品测试支持</p></div><div class="full-contact"><img src="assets/images/contact-card.png" alt="联系方式完整图"></div></div></div></section>
+  <footer>© 2026 深圳市时外材料科技有限公司 · 专业表面处理化学品与金属防护解决方案</footer>
 </body>
 </html>
